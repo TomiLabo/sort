@@ -1,34 +1,38 @@
 package data;
 
-import java.util.ArrayList;
+import java.util.Random;
 
-public final class NumData extends Data<Integer> {
-    public NumData(ArrayList<Integer> dataList) {
-        super(dataList);
+public class NumData extends AbstractData<Integer> {
+    private final Random randFunc = new Random();
+    private final int MAX_VALUE;
+
+    public NumData() {
+        super(0);
+        this.MAX_VALUE = 100000;
+        this.randomize();
     }
     
-    @Override
-    public boolean isOrder(Integer data) {
-        return false;
+    public NumData(Integer raw) {
+        super(raw);
+        this.MAX_VALUE = 100000;
+    }
+
+    public NumData(Integer raw, int max) {
+        super(raw);
+        this.MAX_VALUE = max;
+    }
+   
+    public void show() {
+        System.out.print(this.raw.toString() + " | ");
     }
 
     @Override
-    public boolean isSorted() {
-        return false;
+    public boolean isOrder(Integer target) {
+        return this.raw < target;
     }
 
     @Override
-    public void swap(int leftIndex, int rightIndex) {
-    }
-
-    @Override
-    public ArrayList<Integer> getData() {
-        return this.dataList;
-    }
-
-    @Override
-    public NumData forceUpdateData(ArrayList<Integer> list) {
-        this.dataList = list;
-        return this;
+    public void randomize() {
+        this.raw = randFunc.nextInt(MAX_VALUE);
     }
 }

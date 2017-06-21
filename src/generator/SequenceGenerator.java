@@ -1,8 +1,9 @@
 package generator;
 
-import data.Data;
+import data.AbstractData;
 
 public abstract class SequenceGenerator<T> {
-    
-    public abstract Data generate();
+    public abstract T[] generateDataList(int dataNum);
+
+    public abstract T generateData();
 }
