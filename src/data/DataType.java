@@ -1,5 +1,5 @@
 package data;
 
-public enum DataTypes {
+public enum DataType {
     NUM,
 }

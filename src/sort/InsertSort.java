@@ -1,11 +1,7 @@
 package sort;
 
 import java.util.function.BiFunction;
-import java.util.function.Function;
-
-import data.AbstractData;
 import data.DataList;
-import data.NumData;
 
 public class InsertSort<T> extends Sort<T> {
 

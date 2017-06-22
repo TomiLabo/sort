@@ -1,7 +1,6 @@
 package generator;
 
 import data.AbstractData;
-import data.DataTypes;
 import data.NumData;
 
 public class NumRandomGenerator extends SequenceGenerator<NumData> {

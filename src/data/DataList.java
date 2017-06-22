@@ -6,9 +6,9 @@ import java.util.Collections;
 public class DataList<T> {
     private ArrayList<T> raw;
 
-    public DataList(T[] datas) {
+    public DataList(T[] dataList) {
         this.raw = new ArrayList<T>();
-        for (T data: datas) {
+        for (T data: dataList) {
             this.raw.add(data);
         }
     }

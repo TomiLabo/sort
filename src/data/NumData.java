@@ -25,6 +25,10 @@ public class NumData extends AbstractData<Integer> {
     public void show() {
         System.out.print(this.raw.toString() + " | ");
     }
+    
+    public void doSomeThing() {
+        System.out.println("execute do some thing");
+    }
 
     @Override
     public boolean isOrder(Integer target) {

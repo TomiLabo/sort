@@ -9,11 +9,11 @@ import sort.InsertSort;
 public class Main {
     public static void main(String[] args) {
         NumRandomGenerator g = new NumRandomGenerator();
-        NumData[] tmpDatas = g.generateDataList(10);
-        DataList<NumData> datas = new DataList<NumData>(tmpDatas);
+        NumData[] tmpDataList = g.generateDataList(10);
+        DataList<NumData> dataList = new DataList<NumData>(tmpDataList);
         InsertSort<NumData> sorter = new InsertSort<NumData>();
-        sorter.sort(datas, (left, right) -> left.isOrder(right.get()));
+        sorter.sort(dataList, (left, right) -> left.isOrder(right.get()));
         NumDataListDebugger debugger = new NumDataListDebugger();
-        debugger.showDataList(datas);
+        debugger.showDataList(dataList);
     }
 }
